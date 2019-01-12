@@ -5,11 +5,11 @@ using UnityEngine.AI;
 
 public class WorldInteractions : MonoBehaviour {
 
-    NavMeshAgent navMesh;
+    NavMeshAgent playersAgent;
 
     void Start()
     {
-        navMesh = GetComponent<NavMeshAgent>();
+        playersAgent = GetComponent<NavMeshAgent>();
         
     }
 
@@ -31,11 +31,11 @@ public class WorldInteractions : MonoBehaviour {
             GameObject interactedObj = interactionInfo.collider.gameObject;
             if (interactedObj.tag == "InteractableObj")
             {
-                Debug.Log("Interactable object interacted");
+                interactedObj.GetComponent<Interactable>().MoveToInteraction(playersAgent);
             }
             else
             {
-                navMesh.destination = interactionInfo.point;
+                playersAgent.destination = interactionInfo.point;
             }
         }
     }
