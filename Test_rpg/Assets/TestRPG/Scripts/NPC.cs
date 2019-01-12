@@ -4,8 +4,12 @@ using UnityEngine;
 
 public class NPC : Interactable {
 
+    public string[] dialogue;
+    public string Name;
+
     public override void Interact()
     {
+        DialogueSystem.instance.AddNewDialogue(dialogue, Name);
         Debug.Log("Interacting with NPC");
     }
 }
