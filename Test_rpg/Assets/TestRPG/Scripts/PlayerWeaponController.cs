@@ -15,6 +15,19 @@ public class PlayerWeaponController : MonoBehaviour {
         characterStats = GetComponent<StatCharacter>();
     }
 
+    void Update()
+    {
+        if (EquippedWeapon != null)
+        {
+            if (Input.GetMouseButtonDown(1))
+                PerformWeaponAttack();
+
+
+            if (Input.GetKeyDown(KeyCode.E))
+                PerformWeaponSpecialAttack();
+        }
+    }
+
     public void EquipWeapon(Item itemToEquip)
     {
         if (EquippedWeapon != null)
@@ -33,8 +46,13 @@ public class PlayerWeaponController : MonoBehaviour {
         Debug.Log(equippedWeapon.Stats[0].GetCalculatedStatValue());
     }
 
-    public void PerformAttack()
+    public void PerformWeaponAttack()
     {
-        EquippedWeapon.GetComponent<IWeapon>().PerformAttack();
+        equippedWeapon.PerformAttack();
+    }
+
+    public void PerformWeaponSpecialAttack()
+    {
+        equippedWeapon.PerformSpecialAttack();
     }
 }

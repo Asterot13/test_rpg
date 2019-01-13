@@ -2,9 +2,8 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public interface IWeapon {
-    List<BaseStat> Stats { get; set; }
-
+public interface IEnemy
+{
+    void TakeDamage(int amount);
     void PerformAttack();
-    void PerformSpecialAttack();
 }
