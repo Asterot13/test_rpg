@@ -25,11 +25,12 @@ public class BaseStat
 
     public void RemoveStatBonus(StatBonus statBonus)
     {
-        this.BaseAdditive.Remove(statBonus);
+        this.BaseAdditive.Remove(BaseAdditive.Find(x => x.BonusValue == statBonus.BonusValue));
     }
 
     public int GetCalculatedStatValue()
     {
+        this.FinalValue = 0;
         this.BaseAdditive.ForEach(x => this.FinalValue += x.BonusValue);
         FinalValue += BaseValue;
         return FinalValue;
