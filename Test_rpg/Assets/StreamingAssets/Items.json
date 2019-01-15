@@ -1,0 +1,30 @@
+[
+  {
+    "id": 0,
+    "title": "Sword",
+    "value": 6,
+    "stats": {
+      "power": 6,
+      "defence": 2,
+      "vitality": 6
+    },
+    "description": "Имба нагибаторский меч",
+    "stackable": false,
+    "rarity": 2,
+    "slug": "RavenmoreIconPack.3_13"
+  },
+  {
+    "id": 1,
+    "title": "Axe",
+    "value": 8,
+    "stats": {
+      "power": 8,
+      "defence": 6,
+      "vitality": 3
+    },
+    "description": "Ну невьебаться нагибаторский топор",
+    "stackable": true,
+    "rarity": 4,
+    "slug": "RavenmoreIconPack.3_2"
+  }
+]
