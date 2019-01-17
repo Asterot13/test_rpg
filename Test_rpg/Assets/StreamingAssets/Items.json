@@ -8,8 +8,9 @@
       "defence": 2,
       "vitality": 6
     },
-    "description": "Имба нагибаторский меч",
+    "description": "This is imba shmimba sword",
     "stackable": false,
+    "maxinstack": 1, 
     "rarity": 2,
     "slug": "RavenmoreIconPack.3_13"
   },
@@ -22,8 +23,9 @@
       "defence": 6,
       "vitality": 3
     },
-    "description": "Ну невьебаться нагибаторский топор",
+    "description": "Holly fucking shit axe",
     "stackable": true,
+    "maxinstack": 5,
     "rarity": 4,
     "slug": "RavenmoreIconPack.3_2"
   }
